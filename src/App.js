@@ -1,24 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
+import Movie from "./components/Movie";
+import Navbar from "./components/Navbar";
+import "./style/Movie.scss"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Details from "./pages/Details";
 
 function App() {
+   const [type, setType] = useState("popular");
+ 
+    const [queryInput, setQueryInput] = useState("");
+
+      const [searchResult, setSearchResult] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar
+          type={type}
+          setType={setType}
+          setQueryInput={setQueryInput}
+          queryInput={queryInput}
+          setSearchResult={setSearchResult}
+          searchResult={searchResult}
+        />
+        <Routes>
+          <Route
+            path="/details"
+            element={<Details />}
+            type={type}
+            setType={setType}
+          />
+          
+          <Route
+            path="/"
+            element={
+              <Home
+                type={type}
+                setType={setType}
+                setQueryInput={setQueryInput}
+                queryInput={queryInput}
+              />
+            }
+          />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

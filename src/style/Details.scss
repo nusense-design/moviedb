@@ -1,0 +1,113 @@
+
+.details-wrapper {
+    width: 100%;
+    // min-height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    padding: 0 ;
+    .details-content-wrapper {
+        position: absolute;
+        width: 50%;
+        height: 14rem;
+        // background-color: blanchedalmond;
+        display: flex;
+        flex-direction: column;
+        top: 0%;
+        left: 0;
+        @media only screen and (max-width: 690px) {
+            top: 15%;
+        }
+        .upper-content-wrapper {
+            display: flex;
+            gap: 1rem;
+            @media only screen and (max-width: 690px) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media only screen and (max-width: 690px) {
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+        }
+    }
+    .details-content-img {
+        width: 200px;
+    }
+    .container-image {
+        height: 89vh;
+        width: 100%;
+        z-index: 2;
+        color: #fff;
+    }
+    .duration {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+
+.lower-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+     @media only screen and (max-width: 690px) {
+        margin-top: 1rem;
+       
+    }
+}
+
+// cast
+
+.main-header {
+    
+     
+   
+}
+.main-header-cast{
+    padding: 0 1rem;
+      
+    @media only screen and (max-width: 690px) {
+          position: absolute;
+            top: 132%;
+       
+    }
+}
+.cast-wrapper{
+    color: #fff;
+
+
+    .carousel-cast-wrapper {
+        padding: 0 ;
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        color: #fff;
+    
+        overflow-x: auto;
+    
+        @media only screen and (max-width: 690px) {
+            position: absolute;
+            top: 142%;
+        }
+    
+        .cast-card-wrapper {
+            color: #fff;
+            // height: 250px;
+            min-width: 170px;
+            width: 170px;
+            .cast-div-image {
+                width: 100%;
+                object-fit: contain;
+                // height: ;
+            }
+        }
+    }
+}

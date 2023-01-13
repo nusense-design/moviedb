@@ -1,0 +1,110 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    //
+}
+.navbarWrapper {
+    background-color: #464646;
+    height: 10vh;
+    color: #fff;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 0.5rem;
+    position: relative;
+
+    .logo {
+        cursor: pointer;
+    }
+    .navbar-content {
+        display: flex;
+        align-items: center;
+        .nav {
+            display: flex;
+            flex-direction: row;
+            a {
+                margin-right: 0.6rem;
+                cursor: pointer;
+                font-size: 0.8rem;
+            }
+            @media only screen and (max-width: 690px) {
+                display: none;
+            }
+        }
+        .search-wrapper {
+            input {
+                padding: 0.5rem;
+                border: 0mm;
+                outline: none;
+                ::-moz-focus-inner {
+                    outline: none;
+                }
+            }
+            .navbar-search-btn {
+                padding: 0.44rem;
+                border-radius: 2px;
+                background-color: #8b8f93;
+                color: #fff;
+                border: none;
+                margin-left: 0.3rem;
+                ::-moz-focus-inner {
+                    outline: none;
+                }
+            }
+        }
+        .mobile-menu {
+            position: absolute;
+            left: 0;
+            top: 10vh;
+            width: 100vw;
+            height: 200px;
+            background-color: aqua;
+            display: none;
+            z-index: 22;
+        }
+    }
+
+    .hamMenu {
+        visibility: hidden;
+        @media only screen and (max-width: 690px) {
+            visibility: visible;
+        }
+    }
+}
+
+.mobile-menu {
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.724);
+    padding: 0.7rem 0;
+    a {
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+    @media only screen and (min-width: 690px) {
+        visibility: hidden;
+    }
+}
+.mobile-menu.block-div {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.724);
+    padding: 1.2rem 0;
+    a {
+        color: #fff;
+        margin-bottom: 0.5rem;
+    }
+}
