@@ -26,7 +26,7 @@ const Details = () => {
 
   console.log(movieDetail?.poster_path, "ww");
   const styleObj = {
-    "background-image": `linear-gradient(to bottom right, #002f4b6c, #000000a2),url('https://image.tmdb.org/t/p/original${movieDetail?.backdrop_path}')`,
+    "background-image": `linear-gradient(to bottom right, #04141d9a, #000000a2),url('https://image.tmdb.org/t/p/original${movieDetail?.backdrop_path}')`,
     "background-position": "center",
     "background-size": `cover`,
     "background-repeat": "no-repeat",
@@ -45,7 +45,7 @@ const Details = () => {
             <div className="intro-txt-wrapper">
               {" "}
               <h4 className="txt-header">{movieDetail?.original_title}</h4>
-              <span className="txt-rating">
+              <span className="txt-rating-details">
                 Rating : {movieDetail?.vote_average}
               </span>
               <div className="duration">

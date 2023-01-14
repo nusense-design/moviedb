@@ -14,6 +14,17 @@
         flex-direction: column;
         top: 0%;
         left: 0;
+        .intro-txt-wrapper{
+            .txt-rating-details{
+                
+                    font-size: 1.2rem;
+                    line-height: 2.1;
+                    color: rgb(200, 235, 255);
+                    font-weight: 500;
+                
+            
+            }
+        }
         @media only screen and (max-width: 690px) {
             top: 15%;
         }
